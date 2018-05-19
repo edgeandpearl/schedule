@@ -1,15 +1,70 @@
 @import "reset";
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  // background: url("../images/bg.png") left top no-repeat;
 }
 
-.kek {
-  color: red;
+.dev {
+  min-height: 3000px;
+  opacity: 0.7;
+}
 
-  &_us {
-    color: green;
+.header {
+  background: url("../images/gradient.png");
+  height: 96px;
+  text-align: center;
+
+  &__input {
+    display: inline-block;
+    margin: 15px;
+
+    &-field {
+      width: 190px;
+      height: 40px;
+    }
+
+    &-caption {
+      color: white;
+      font-family: Helvetica;
+      text-align: left;
+      font-size: 11px;
+    }
+  }
+}
+
+.chartreuse-button {
+  font-family: Helvetica;
+  font-weight: 900;
+  display: inline-block;
+  background-color: #BED900;
+  padding: 12px 20px;
+  margin: 0 20px;
+  border-radius: 5px
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top-block {
+  height: 96px;
+  background: url("../images/logo.png") no-repeat;
+  background-position: 40px 19px;
+
+  &__content {
+    width: 750px;
+    float: right;
+    padding: 30px 0;
+  }
+
+  &__phone {
+    &-number {
+      font-size: 27px;
+      padding-right: 10px;
+    }
+
+    &-separator {
+    }
   }
 }

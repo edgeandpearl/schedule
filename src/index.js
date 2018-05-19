@@ -1,19 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './less/index.css';
+import HeaderWithLoginForm from './components/headerWithLoginForm';
+import TopBlock from './components/topBlock'
 
 class Page extends React.Component {
   render () {
     return (
-      <div class="kek">
-        sup
-        <span class="kek_us">supsup</span>
-      </div>
+      <React.Fragment>
+        <HeaderWithLoginForm />
+        <div class="content">
+          <TopBlock />
+        </div>
+      </React.Fragment>
     )
   }
 }
 
 ReactDOM.render(
   <Page />,
-  document.getElementById('dev')
+  document.getElementById('page')
 );
