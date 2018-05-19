@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './less/index.css';
 
 class Page extends React.Component {
-
   render () {
     return (
       <div class="kek">
