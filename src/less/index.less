@@ -1,7 +1,26 @@
 @import "reset";
 
+@keyframes turndown {
+  0% {
+    clip-path: polygon(100% 50%, 100% 75%, 50% 25%, 0 75%, 0 50%, 50% 0);
+      }
+  100% {
+    clip-path: polygon(100% 25%, 100% 50%, 50% 100%, 0 50%, 0 24%, 50% 75%);
+      }
+}
+
+@keyframes turnup {
+  0% {
+    clip-path: polygon(100% 25%, 100% 50%, 50% 100%, 0 50%, 0 24%, 50% 75%);
+      }
+  100% {
+    clip-path: polygon(100% 50%, 100% 75%, 50% 25%, 0 75%, 0 50%, 50% 0);
+      }
+}
+
+
 body {
-  background: url("../images/bg.png") left top no-repeat;
+  background: url("/images/bg.png") left top no-repeat;
 }
 
 .dev {
@@ -10,7 +29,7 @@ body {
 }
 
 .header {
-  background: url("../images/gradient.png");
+  background: url("/images/gradient.png");
   height: 96px;
   text-align: center;
 
@@ -49,13 +68,13 @@ body {
 
 .top-block {
   height: 96px;
-  background: url("../images/logo.png") no-repeat;
+  background: url("/images/logo.png") no-repeat;
   background-position: 40px 19px;
 
   &__content {
     width: 750px;
     float: right;
-    padding: 30px 0;
+    padding: 28px 0;
   }
 
   &__phone {
@@ -85,5 +104,88 @@ body {
       line-height: 14px;
       vertical-align: middle;
     }
+  }
+}
+
+.settings {
+
+  &__tabs {
+    background: url('/images/rainbow.png');
+    height: 72px;
+    padding-left: 35px;
+    position: relative;
+
+    &-overlay {
+      height: 62px;
+      width: 1200px;
+      background: white;
+      opacity: 0.5;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &-tab {
+      padding: 21px 15px 0 15px;
+      height: 51px;
+      display: inline-block;
+      margin-right: 3px;
+      position: relative;
+      cursor: pointer;
+
+      &-text {
+        font-family: Helvetica;
+        font-size: 21px;
+        margin-left: 14px;
+        vertical-align: baseline;
+      }
+
+      &_active {
+        background: gold;
+        position: relative;
+
+        :hover {
+          color: #000;
+        }
+      }
+    }
+  }
+
+  &__geo-and-dropdown {
+    height: 50px;
+  }
+
+  &__dropdown {
+
+    &-title {
+      display: inline-block;
+      color: white;
+      font-weight: 900;
+      font-family: Helvetica;
+      font-size: 17px;
+      vertical-align: top;
+      margin: 16px 0 0 40px;
+    }
+
+    &-arrow {
+      vertical-align: top;
+      margin: 10px 0 0 21px;
+
+      &_up {
+        clip-path: polygon(100% 50%, 100% 75%, 50% 25%, 0 75%, 0 50%, 50% 0);
+        animation: turnup 1s;
+      }
+
+      &_down {
+        clip-path: polygon(100% 25%, 100% 50%, 50% 100%, 0 50%, 0 24%, 50% 75%);
+        animation: turndown 1s;
+      }
+
+    }
+  }
+
+  &__filters {
+    // background: red;
+    height: 252px;
   }
 }
